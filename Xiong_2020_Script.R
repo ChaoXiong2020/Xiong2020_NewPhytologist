@@ -28,8 +28,8 @@ head(alpha)
 #### Plot Figure  ###
 p=ggplot(alpha, aes(x=niche, y=shannon, fill=niche,col=niche))+ 
   geom_boxplot(width=0.5,position=position_dodge(0.6),alpha=0.8)+geom_jitter(width = 0.2,alpha=0.8,size=1)
-p=p+scale_colour_alphanual(values =c("gray33","#999999","#E69F00","#009E73","#D55E00","#56B4E9"))
-p=p+scale_fill_alphanual(values =c("gray33","#999999","#E69F00","#009E73","#D55E00","#56B4E9"))
+p=p+scale_colour_manual(values =c("gray33","#999999","#E69F00","#009E73","#D55E00","#56B4E9"))
+p=p+scale_fill_manual(values =c("gray33","#999999","#E69F00","#009E73","#D55E00","#56B4E9"))
 p=p+theme(axis.title.x = element_text(face="bold", colour="black", size=6),
             axis.title.y = element_text(face="bold", colour="black", size=6),
             axis.text.x = element_text(face="bold", colour="black", size=6),
