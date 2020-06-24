@@ -94,17 +94,6 @@ r.squaredGLMM(div.fit1)
 
 ####### PERMANOVA #######
 
-### Nested PERMANOVA ###
-#### Import data ####
-setwd("F:/Desktop/r/chaoxiong/crop_microbiome/PERMANOVA/")
-sp.dist=read.table(file="weighted_unifrac_zotu_table_norm.txt",header=T,check.names=FALSE,sep="")
-map=read.table(file="map.txt",header=T,row.names=1,check.names=FALSE,sep="")
-head(sp.dist)
-head(map)
-### Analysis ####
-adonis_all=adonis(sp.dist~niche+crop/site+Treatment,data =map,permutations=999,strata = map$crop)
-
-### PERMANOVA ###
 #### Import data ####
 setwd("F:/Desktop/r/chaoxiong/crop_microbiome/PERMANOVA/")
 sp.dist=read.table(file="weighted_unifrac_zotu_table_norm_maize.txt",header=T,check.names=FALSE,sep="")
